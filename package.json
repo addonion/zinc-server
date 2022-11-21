@@ -1,0 +1,33 @@
+{
+  "name": "zinc-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.5.1",
+    "@strapi/plugin-users-permissions": "4.5.1",
+    "@strapi/strapi": "4.5.1",
+    "add": "^2.0.6",
+    "better-sqlite3": "7.6.2",
+    "strapi-provider-upload-cloudflare-r2": "^1.0.2",
+    "yarn": "^1.22.19"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "883b3c20-7e54-4bc1-a4d1-6adb7dde15c0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
