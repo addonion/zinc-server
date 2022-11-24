@@ -34,6 +34,6 @@
   },
   "license": "MIT",
   "workspaces": [
-    "./plugins/strapi-plugin-ckeditor"
+    "./src/plugins/strapi-plugin-ckeditor"
   ]
 }
