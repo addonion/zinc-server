@@ -1,4 +1,13 @@
 module.exports = ({ env }) => ({
+  seo: {
+    enabled: true,
+  },
+  placeholder: {
+    enabled: true,
+    config: {
+      size: 10,
+    },
+  },
   upload: {
     config: {
       provider: "strapi-provider-upload-cloudflare-r2",
@@ -18,5 +27,9 @@ module.exports = ({ env }) => ({
         delete: {},
       },
     },
+  },
+  ckeditor: {
+    enabled: true,
+    resolve: "./src/plugins/strapi-plugin-ckeditor",
   },
 });

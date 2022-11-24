@@ -11,12 +11,14 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.5.1",
-    "@strapi/plugin-users-permissions": "4.5.1",
-    "@strapi/strapi": "4.5.1",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.4",
+    "@strapi/plugin-i18n": "4.5.2",
+    "@strapi/plugin-seo": "^1.7.7",
+    "@strapi/plugin-users-permissions": "4.5.2",
+    "@strapi/strapi": "4.5.2",
     "add": "^2.0.6",
-    "better-sqlite3": "7.6.2",
     "pg": "^8.8.0",
+    "strapi-plugin-placeholder": "^4.3.6",
     "strapi-provider-upload-cloudflare-r2": "^1.0.2",
     "yarn": "^1.22.19"
   },
@@ -30,5 +32,8 @@
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": [
+    "./src/plugins/strapi-plugin-ckeditor"
+  ]
 }
