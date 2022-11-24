@@ -30,6 +30,6 @@ module.exports = ({ env }) => ({
   },
   ckeditor: {
     enabled: true,
-    resolve: "./test/plugins/strapi-plugin-ckeditor",
+    resolve: "./src/plugins/strapi-plugin-ckeditor",
   },
 });
