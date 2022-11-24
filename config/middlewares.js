@@ -6,7 +6,7 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         directives: {
           "script-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "server.zinc.cc"],
-          "img-src": ["'self'", "data:", "cdn.jsdelivr.net", "strapi.io", "dl.airtable.com", `${env("R2_PUBLIC_URL")}`, "server.zinc.cc"],
+          "img-src": ["*"],
         },
       },
     },

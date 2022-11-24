@@ -11,7 +11,6 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@ckeditor/strapi-plugin-ckeditor": "^0.0.4",
     "@strapi/plugin-i18n": "4.5.2",
     "@strapi/plugin-seo": "^1.7.7",
     "@strapi/plugin-users-permissions": "4.5.2",
@@ -19,6 +18,7 @@
     "add": "^2.0.6",
     "pg": "^8.8.0",
     "strapi-plugin-placeholder": "^4.3.6",
+    "strapi-plugin-react-editorjs": "^2.0.2",
     "strapi-provider-upload-cloudflare-r2": "^1.0.2",
     "yarn": "^1.22.19"
   },
@@ -28,12 +28,5 @@
   "strapi": {
     "uuid": "883b3c20-7e54-4bc1-a4d1-6adb7dde15c0"
   },
-  "engines": {
-    "node": ">=16.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT",
-  "workspaces": [
-    "./src/plugins/strapi-plugin-ckeditor"
-  ]
+  "license": "MIT"
 }
