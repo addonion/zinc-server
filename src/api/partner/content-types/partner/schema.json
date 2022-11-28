@@ -4,7 +4,7 @@
   "info": {
     "singularName": "partner",
     "pluralName": "partners",
-    "displayName": "Partner",
+    "displayName": "Партнёры",
     "description": ""
   },
   "options": {
@@ -34,6 +34,10 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "inversedBy": "partners"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name"
     }
   }
 }

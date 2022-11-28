@@ -30,7 +30,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::partner.partner",
-      "inversedBy": "projects"
+      "mappedBy": "projects"
     }
   }
 }
