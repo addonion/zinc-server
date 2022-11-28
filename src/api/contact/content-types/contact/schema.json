@@ -12,20 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
-    "Role": {
-      "type": "string"
-    },
-    "Phone": {
-      "type": "string"
-    },
-    "Email": {
-      "type": "string"
-    },
     "Map": {
       "type": "text"
+    },
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
     }
   }
 }
