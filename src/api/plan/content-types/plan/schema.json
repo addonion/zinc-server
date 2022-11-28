@@ -4,11 +4,11 @@
   "info": {
     "singularName": "plan",
     "pluralName": "plans",
-    "displayName": "plans",
+    "displayName": "Цены",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
