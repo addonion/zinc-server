@@ -9,14 +9,13 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.5.5",
+    "@strapi/plugin-i18n": "4.6.0",
     "@strapi/plugin-seo": "^1.7.7",
-    "@strapi/plugin-users-permissions": "4.5.5",
-    "@strapi/strapi": "4.5.5",
+    "@strapi/plugin-users-permissions": "4.6.0",
+    "@strapi/strapi": "4.6.0",
     "add": "^2.0.6",
-    "pg": "^8.8.0",
+    "pg": "^8.9.0",
     "strapi-plugin-placeholder": "^4.3.6",
     "strapi-plugin-react-editorjs": "^2.0.2",
     "strapi-plugin-vercel-deploy": "^1.4.0",
