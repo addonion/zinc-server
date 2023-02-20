@@ -8,6 +8,13 @@ module.exports = ({ env }) => ({
       roles: ["strapi-super-admin", "strapi-editor", "strapi-author"],
     },
   },
+  sentry: {
+    enabled: true,
+    config: {
+      dsn: "https://a8d2139368924c5389525bce27785dae@o1089146.ingest.sentry.io/4504707371630592",
+      sendMetadata: true,
+    },
+  },
   seo: {
     enabled: true,
   },
