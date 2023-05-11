@@ -2,19 +2,13 @@
   "collectionName": "components_media_3_d_tours",
   "info": {
     "displayName": "3D tour",
-    "icon": "arrows-alt"
+    "icon": "arrows-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Pano": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "ftp": {
+      "type": "string"
     }
   }
 }
