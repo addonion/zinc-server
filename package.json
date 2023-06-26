@@ -10,15 +10,15 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.10.4",
-    "@strapi/plugin-sentry": "^4.10.4",
-    "@strapi/plugin-seo": "^1.8.0",
-    "@strapi/plugin-users-permissions": "4.10.4",
-    "@strapi/strapi": "4.10.4",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
+    "@strapi/plugin-i18n": "4.11.2",
+    "@strapi/plugin-sentry": "^4.11.2",
+    "@strapi/plugin-seo": "^1.9.2",
+    "@strapi/plugin-users-permissions": "4.11.2",
+    "@strapi/strapi": "4.11.2",
     "add": "^2.0.6",
-    "pg": "^8.10.0",
+    "pg": "^8.11.0",
     "strapi-plugin-placeholder": "^4.4.0",
-    "strapi-plugin-react-editorjs": "^2.0.2",
     "strapi-plugin-vercel-deploy": "^1.4.0",
     "strapi-provider-upload-cloudflare-r2": "^1.0.2",
     "yarn": "^1.22.19"
@@ -30,7 +30,7 @@
     "uuid": "883b3c20-7e54-4bc1-a4d1-6adb7dde15c0"
   },
   "engines": {
-    "node": ">=14.19.1 <=16.x.x",
+    "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

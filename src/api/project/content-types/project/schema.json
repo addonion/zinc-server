@@ -12,14 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title"
+    "slug": {
+      "type": "uid"
     },
-    "Content": {
+    "content": {
       "type": "dynamiczone",
       "components": [
         "media.3-d-tour",
