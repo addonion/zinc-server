@@ -10,12 +10,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
-    "@strapi/plugin-i18n": "4.12.6",
-    "@strapi/plugin-sentry": "^4.12.6",
-    "@strapi/plugin-seo": "^1.9.2",
-    "@strapi/plugin-users-permissions": "4.12.6",
-    "@strapi/strapi": "4.12.6",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.9",
+    "@strapi/plugin-i18n": "4.14.2",
+    "@strapi/plugin-sentry": "^4.14.2",
+    "@strapi/plugin-seo": "^1.9.5",
+    "@strapi/plugin-users-permissions": "4.14.2",
+    "@strapi/strapi": "4.14.2",
     "add": "^2.0.6",
     "pg": "^8.11.3",
     "strapi-plugin-placeholder": "^4.4.0",
