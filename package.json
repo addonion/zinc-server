@@ -10,17 +10,21 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/strapi-plugin-ckeditor": "^0.0.9",
-    "@strapi/plugin-i18n": "4.14.5",
-    "@strapi/plugin-sentry": "^4.14.5",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.13",
+    "@strapi/plugin-i18n": "4.25.9",
+    "@strapi/plugin-sentry": "^4.25.9",
     "@strapi/plugin-seo": "^1.9.6",
-    "@strapi/plugin-users-permissions": "4.14.5",
-    "@strapi/strapi": "4.14.5",
+    "@strapi/plugin-users-permissions": "4.25.9",
+    "@strapi/strapi": "4.25.9",
     "add": "^2.0.6",
     "pg": "^8.11.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
     "strapi-plugin-placeholder": "^4.4.0",
     "strapi-plugin-vercel-deploy": "^1.4.0",
     "strapi-provider-upload-cloudflare-r2": "^1.0.2",
+    "styled-components": "^5.3.11",
     "yarn": "^1.22.19"
   },
   "author": {
