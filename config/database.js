@@ -17,6 +17,7 @@ module.exports = ({ env }) => ({
       user: env("DATABASE_USERNAME", "postgres"),
       password: env("DATABASE_PASSWORD", ""),
       ssl: env.bool("DATABASE_SSL", false),
+      pool_mode: "session",
     },
   },
 });
