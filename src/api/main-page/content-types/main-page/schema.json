@@ -33,11 +33,7 @@
         }
       },
       "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::jodit-editor.jodit"
     },
     "steps": {
       "pluginOptions": {
@@ -46,11 +42,7 @@
         }
       },
       "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "standard"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      "customField": "plugin::jodit-editor.jodit"
     }
   }
 }

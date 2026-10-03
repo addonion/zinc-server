@@ -5,9 +5,9 @@ module.exports = ({ env }) => [
     config: {
       contentSecurityPolicy: {
         directives: {
-          "script-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "server.zinc.cc", "https://cdn.ckeditor.com"],
+          "script-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "server.zinc.cc"],
           "img-src": ["*"],
-          "connect-src": ["https://proxy-event.ckeditor.com"],
+          "connect-src": ["'self'"],
         },
       },
     },

@@ -79,7 +79,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'media.3-d-tour': Media3DTour;
       'media.gallery': MediaGallery;
