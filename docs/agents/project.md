@@ -8,7 +8,7 @@
 
 | Область | Где читать | Текущее состояние |
 | --- | --- | --- |
-| Зависимости и команды | [package.json](../../package.json), [package-lock.json](../../package-lock.json) | Strapi и Users & Permissions 5.56.0; Jodit Editor 1.1.5, PostgreSQL-драйвер `pg`; npm lockfile |
+| Зависимости и команды | [package.json](../../package.json), [package-lock.json](../../package-lock.json) | Strapi и Users & Permissions 5.60.0; Jodit Editor 1.1.5, PostgreSQL-драйвер `pg`; npm lockfile; Node.js 24 |
 | Инициализация | [src/index.js](../../src/index.js) | `register` и `bootstrap` без пользовательской логики |
 | Контентный API | `src/api/<name>/` | Все семь наборов controllers/routes/services используют `createCoreController`, `createCoreRouter`, `createCoreService` без переопределений |
 | Повторно используемые компоненты | `src/components/` | Два media-компонента и два SEO-компонента |
