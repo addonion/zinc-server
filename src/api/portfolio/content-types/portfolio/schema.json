@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Портфолио"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "featuredProjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project"
+    }
+  }
+}

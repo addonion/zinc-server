@@ -8,9 +8,9 @@
 
 | Область | Где читать | Текущее состояние |
 | --- | --- | --- |
-| Зависимости и команды | [package.json](../../package.json), [package-lock.json](../../package-lock.json) | Strapi и Users & Permissions 5.60.0; Jodit Editor 1.1.5, PostgreSQL-драйвер `pg`; npm lockfile; Node.js 24 |
+| Зависимости и команды | [package.json](../../package.json), [package-lock.json](../../package-lock.json) | Strapi и Users & Permissions 5.64.0; Jodit Editor 1.1.5, PostgreSQL-драйвер `pg`; npm lockfile; Node.js 24 |
 | Инициализация | [src/index.js](../../src/index.js) | `register` и `bootstrap` без пользовательской логики |
-| Контентный API | `src/api/<name>/` | Все семь наборов controllers/routes/services используют `createCoreController`, `createCoreRouter`, `createCoreService` без переопределений |
+| Контентный API | `src/api/<name>/` | Использует `createCoreController`, `createCoreRouter`, `createCoreService`. У «Портфолио» в контентном API доступно только чтение опубликованной версии |
 | Повторно используемые компоненты | `src/components/` | Два media-компонента и два SEO-компонента |
 | Админка | [app.example.js](../../src/admin/app.example.js), [webpack.config.example.js](../../src/admin/webpack.config.example.js) | Только примеры настройки; активного пользовательского entrypoint в `src/admin/` нет |
 | Расширения плагинов и миграции | `src/extensions/`, `database/migrations/` | Только `.gitkeep`; пользовательских реализаций нет |
@@ -27,6 +27,7 @@
 | [main-page](../../src/api/main-page/content-types/main-page/schema.json) | singleType | нет | да | `seo`, `content`, `steps` |
 | [partner](../../src/api/partner/content-types/partner/schema.json) | collectionType | да | не задана | `Name`, `Site`, `Logo`, `projects`, `Slug` |
 | [plan](../../src/api/plan/content-types/plan/schema.json) | collectionType | нет | не задана | `Name`, `Price` |
+| [portfolio](../../src/api/portfolio/content-types/portfolio/schema.json) | singleType | да | не задана | `featuredProjects` |
 | [project](../../src/api/project/content-types/project/schema.json) | collectionType | да | не задана | `title`, `slug`, `content`, `partners` |
 | [team](../../src/api/team/content-types/team/schema.json) | collectionType | да | не задана | `Name`, `Role`, `Phone`, `Email`, `Photo` |
 
@@ -37,6 +38,9 @@
 - `partner.Slug` — UID с `targetField: "Name"`; у `project.slug` источник автозаполнения не задан.
 - `main-page.content`, `main-page.steps` и `dizajn-proekt.content` — custom field `plugin::jodit-editor.jodit`; содержимое хранится как HTML в текстовом поле. Учитывай формат HTML при изменении выдачи и потребителей.
 - `project.content` — dynamic zone из `media.3-d-tour` и `media.gallery`.
+- `portfolio.featuredProjects` — односторонняя упорядоченная связь с проектами. В Content Manager открой «Портфолио», добавь нужные проекты, задай порядок перетаскиванием и опубликуй запись. Сайт выводит их первыми, затем показывает остальные от новых к старым по дате создания, без дублей. Существующие проекты не требуют переноса.
+- Ширина `featuredProjects` настраивается отдельно в каждом окружении. В «Портфолио» открой «More actions» → «Configure the view», у поля `featuredProjects` выбери «Size» → «100%» и нажми «Finish» → «Save».
+- Для сортировки списка «Проекты» от новых к старым открой «View settings» → «Configure the view», добавь столбец `createdAt`, укажи его в «Default sort attribute» и выбери «Default sort order» → «DESC». Настройка применяется только к админке текущего окружения.
 - В схемах присутствуют `pluginOptions.i18n`; в `package.json` отдельная зависимость i18n не объявлена. Список локалей и работу локализации проверяй на запущенном приложении.
 
 ## Компоненты
@@ -62,5 +66,7 @@
 | [plugins.js](../../config/plugins.js) | Локальный upload provider и breakpoints изображений; Sentry только в закомментированном блоке |
 
 Настройки ролей Users & Permissions, API-токенов и разрешений не представлены отдельным конфигурационным файлом проекта. Не делай выводов о публичном доступе по core router, декларациям `types/generated/` или схеме.
+
+Для закрепления проектов сайту нужен доступ на чтение `portfolio.find` у роли Public в Users & Permissions. После настройки проверь без токена `GET /api/portfolio?populate[featuredProjects][fields][0]=slug`. Если подборка не опубликована или чтение недоступно (`403` или `404`), сайт показывает обычное портфолио.
 
 `public/uploads/` предназначен для локальных медиа и исключён из Git, кроме `.gitkeep`. Сохранность файлов при деплое и настройки внешнего хранения репозиторием не подтверждены.
